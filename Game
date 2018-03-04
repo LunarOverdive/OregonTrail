@@ -1,15 +1,17 @@
 #include <stdio.h>
 int main () {
-    double food, water, members;
-    char player[10], fam1[10], fam2[10], fam3[10], fam4[10];
+    double food, water;
+    char player[10], fam1[10], fam2[10], fam3[10], fam4[10], members[10];
 
     printf("Welcome to the Oregon Trail. Please enter your name.\n");
     scanf("%s", player);
     printf("Please enter the names of your other four party members, each seperated by a space.\n");
     scanf("%s %s %s %s", &fam1, &fam2, &fam3, &fam4);
-    printf("The names of the people in your party are as follows: %s, %s, %s, %s. Is this correct?(0 for no, 1 for yes)\n", fam1, fam2, fam3, fam4);
+    printf("The names of the people in your party are as follows: %s, %s, %s, %s. Is this correct?(Y/N)\n", fam1, fam2, fam3, fam4);
     scanf("%s", &members);
-        if (members == 0){
-            printf("Which party member would you like to change?\n(1)%s\n(2)%s\n(3)%s\n(4)%s\n", fam1, fam2, fam3, fam4);
-        }
+        if (members == 'n')
+            printf("Which party member would you like to change?\n(1)%c\n(2)%c\n(3)%c\n(4)%c\n", fam1, fam2, fam3, fam4);
+        else 
+        printf("Test %s\n", members);
+return 0;
 }
